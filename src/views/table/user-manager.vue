@@ -53,7 +53,7 @@
       </el-table-column>
       <el-table-column label="注册日期" width="300px" align="center">
         <template slot-scope="{row}">
-          <span>{{ row.create_time }}</span>
+          <span>{{ row.created_at }}</span>
         </template>
       </el-table-column>
       <!-- <el-table-column v-if="showReviewer" label="Reviewer" width="110px" align="center">
@@ -350,7 +350,7 @@ export default {
       this.downloadLoading = true
       import('@/vendor/Export2Excel').then(excel => {
         const tHeader = ['用户ID', '用户名', '角色', '注册时间', '状态']
-        const filterVal = ['user_id', 'username', 'role', 'create_time', 'pstatus']
+        const filterVal = ['user_id', 'username', 'role', 'created_at', 'pstatus']
         const data = this.formatJson(filterVal)
         excel.export_json_to_excel({
           header: tHeader,
