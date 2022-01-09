@@ -10,6 +10,7 @@ import Layout from '@/layout'
 /* Router Modules */
 import userManagerRouter from './modules/table'
 import chartsRouter from './modules/charts'
+import fundRouter from './modules/fund'
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -63,6 +64,7 @@ export const constantRoutes = [
   /** when your routing map is too long, you can split it into small modules **/
   userManagerRouter,
   chartsRouter,
+  fundRouter,
 
   {
     path: '/example',
